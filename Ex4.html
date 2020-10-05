@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*Refaça o exercício 2 utilizando o conceito de função, ou seja, crie uma função chamada
+de Epalindromo que retorne true para Sim e false para não.*/
+
+    function Epalindromo(str) {
+        var palavra = str.length;
+        for (var contador = 0; contador < palavra/2; contador++){
+            if (str[contador] !== str[palavra - 1 - contador]) {
+                return false;
+            }
+        }
+                return true;
+    }
+
+        console.log(Epalindromo("arara"));
+
+    </script>
+</body>
+</html> 
+

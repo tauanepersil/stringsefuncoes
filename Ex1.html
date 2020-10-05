@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*Solicite o usuário digitar uma palavra qualquer e mostre para o usuário a quantidade
+de vogais e consoantes.*/
+
+        var palavraDigitada = window.prompt("Digite uma palavra")
+        var Vogais = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú','ã', 'õ', 'ê'];
+        var totalVogal = 0
+
+        for(contador = 0; contador<palavraDigitada.length; contador++){
+            if(Vogais.indexOf(palavraDigitada[contador]) != -1){
+                totalVogal++;
+            }
+        }
+            console.log(`A palavra digitada possui ${totalVogal} vogais` )
+
+    </script>
+</body>
+</html>
+
+
+
+
+var assert = require('assert');
+
+var contarVogais = function(palavra) {
+    var totalVogal = 0;
+    var vogais = ['a', 'e', 'i', 'o', 'u'];
+    var i;
+
+    for (i = 0; i < palavra.length; i++ ) {
+        if(vogais.indexOf(palavra[i]) != -1) {
+            totalVogal++;
+        }
+    }
+
+    return totalVogal;
+}
+
+
+//
+// Seu teste
+//
+try {
+    assert.equal(6, contarVogais("abecedario"));
+} catch(e) {
+    console.log(e);
+}
